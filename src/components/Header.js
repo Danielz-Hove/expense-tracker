@@ -4,26 +4,26 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white sticky top-0 z-50">
+    <header className="bg-white sticky top-0 z-50">  {/* Changed here */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - Centered on mobile, left-aligned on desktop */}
           <div className="flex-1 md:flex-none text-center md:text-left">
-            <h1 className="text-xl font-bold">App Logo</h1>
+            <h1 className="text-xl font-bold text-gray-800">Expense Tracker</h1> {/* Changed here */}
           </div>
 
           {/* Desktop Navigation - Right-aligned */}
           <nav className="hidden md:flex space-x-8 ml-auto">
-            <a href="#" className="hover:text-gray-300 px-3 py-2 rounded-md">Home</a>
-            <a href="#" className="hover:text-gray-300 px-3 py-2 rounded-md">About</a>
-            <a href="#" className="hover:text-gray-300 px-3 py-2 rounded-md">Contact</a>
+            <a href="#" className="hover:text-gray-500 px-3 py-2 rounded-md text-gray-700">Home</a> {/* Changed here */}
+            <a href="#" className="hover:text-gray-500 px-3 py-2 rounded-md text-gray-700">About</a> {/* Changed here */}
+            <a href="#" className="hover:text-gray-500 px-3 py-2 rounded-md text-gray-700">Contact</a> {/* Changed here */}
           </nav>
 
           {/* Mobile Menu Button - Right-aligned */}
           <div className="md:hidden flex-1 flex justify-end">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700"
+              className="p-2 rounded-md text-gray-400 hover:text-gray-600"  /* Changed here */
             >
               <span className="sr-only">Open menu</span>
               <svg
@@ -55,9 +55,9 @@ const Header = () => {
         {/* Mobile Menu - Centered links */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 text-center">
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-700">Home</a>
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-700">About</a>
-            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-700">Contact</a>
+            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700">Home</a>  {/* Changed here */}
+            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700">About</a>  {/* Changed here */}
+            <a href="#" className="block px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700">Contact</a>  {/* Changed here */}
           </div>
         </div>
       </div>
